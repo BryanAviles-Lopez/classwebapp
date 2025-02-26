@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Audio Recorder</title>
+    <title>Updated Audio Recorder</title>
 </head>
 <body>
 
@@ -53,6 +53,7 @@
                             Your browser does not support the audio element.
                         </audio><br>
                         {{ file }}
+                        <a href="{{ url_for('uploaded_file', folder='tts', filename=file + '.txt') }}">View Transcript & Sentiment</a>
                     </li>
                     {% endfor %}
                 </ul>
